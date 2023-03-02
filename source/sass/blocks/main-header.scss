@@ -1,0 +1,128 @@
+.main-header {
+  background: $black-pearl-to-down;
+  padding: 30px 50px 35px;
+  width: 100%;
+  min-height: 120px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (max-width: $tablet-only) {
+    padding: 20px 50px 25px;
+    min-height: 100px;
+  }
+
+  @media (max-width: $mobile-only) {
+    padding: 10px 15px 20px 26px;
+    min-height: 70px;
+  }
+}
+
+.main-header__logo-link {
+  display: flex;
+  flex-shrink: 0;
+  transition: $trans-default;
+  
+  &--mobile {
+    display: none;
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+  
+  @media (max-width: $mobile-only) {
+    &--mobile {
+      display: flex;
+    }
+
+    &--desktop {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-only) {
+    align-self: flex-end;
+  }
+}
+
+.main-header__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 5px;
+
+  @media (max-width: $tablet-only) {
+    align-self: flex-start;
+    margin-right: 20px;
+  }
+}
+
+.main-header__item {
+  margin-bottom: 5px;
+
+  &:not(:last-child) {
+    margin-right: 120px;
+  }
+
+  @media (max-width: $tablet-only) {
+    margin: 0;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+}
+
+.main-header__link {
+  color: $color-alice-blue;
+  position: relative;
+  padding-left: 35px;
+  transition: $trans-default;
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-only) {
+    display: block;
+    padding: 20px;
+  }
+}
+
+.main-header__link-text {
+  @media (max-width: $tablet-only) {
+    display: none;
+  }
+}
+
+.main-header__link-icon {
+  position: absolute;
+  top: auto;
+  left: 0;
+
+  @media (max-width: $tablet-only) {
+    top: 10px;
+    left: 10px;
+  }
+}
+
+.main-header__btn {
+  font-size: 14px;
+  border: 1px solid $color-alice-blue;
+  line-height: 18px;
+  margin-right: 62px;
+  margin-bottom: 7px;
+  flex-shrink: 0;
+
+  @media (max-width: $tablet-only) {
+    display: none;
+  }
+}

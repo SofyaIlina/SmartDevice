@@ -69,3 +69,9 @@
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
 }
+
+.reset-list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
