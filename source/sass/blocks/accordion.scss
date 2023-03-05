@@ -1,0 +1,70 @@
+.accordion {
+  @include vp-767 {
+    & & {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &__element {
+      border-top: 1px solid $color-alice-blue-opacity7;
+      border-bottom: 1px solid $color-alice-blue-opacity7;
+    }
+
+    &__element:first-child {
+      border-bottom: none;
+    }
+
+    &__element.is-active > &__button {
+      &::before {
+        display: none;
+      }
+    }
+
+    &__button {
+      margin: 0;
+      padding: 19px 25px 18px;
+      position: relative;
+
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: 27px;
+        top: 27px;
+        width: 15px;
+        height: 1px;
+        background-color: $color-alice-blue-lighter;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 27px;
+        top: 27px;
+        width: 15px;
+        height: 1px;
+        background-color: $color-alice-blue-lighter;
+        transform: rotate(90deg);
+      }
+
+      &:active {
+        background-color: $color-deep-sky-blue;
+      }
+    }
+
+    &__content {
+      padding: 0 25px;
+    }
+
+    &__content li:first-child {
+      margin-top: -5px;
+    }
+
+    &__content li:last-child {
+      margin-bottom: 15px;
+    }
+  }
+}

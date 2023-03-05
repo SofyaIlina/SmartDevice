@@ -13,7 +13,7 @@
   <body class="body">
     <div class="wrapper">
       <header class="main-header">
-        <div class="main-header__container">
+        <div class="main-header__container container">
           <a class="main-header__logo-link main-header__logo-link--mobile" href="index.html">
             <svg class="main-header__logo-icon-mobile" width="35" height="35" aria-label="Логотип Smart Device." focusable="false">
               <use href="img/sprite.svg#logo-mobile"></use>
@@ -48,16 +48,98 @@
         </div>
       </header>
       <main class="main-container">
-        <section class="">
-          <div class="container" style="height: 1000px;">
-            <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
-            <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
+        <h1 class="visually-hidden">Smart Device - магазин печатных плат.</h1>
+        <section class="promo">
+          <div class="promo__container container">
+            <h2 class="promo__title">Печатные платы</h2>
+            <p class="promo__description">производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
+            <a class="promo__link promo__link--desktop btn" href="#feedback">Получить бесплатную консультацию</a>
+            <a class="promo__link promo__link--mobile btn" href="#feedback">Бесплатная консультация</a>
           </div>
         </section>
+        <section class="feedback" id="feedback">
+          <form>
+
+          </form>
+        </section>
       </main>
-      <footer>
-        <div class="container">
-          
+      <footer class="footer">
+        <div class="footer__container container">
+          <div class="footer__social">
+            <a class="footer__logo-link" href="index.html">
+              <svg class="footer__logo-icon"  width="215" height="55" aria-label="Логотип Smart Device." focusable="false">
+                <use href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <ul class="footer__social-list social-list reset-list">
+              <li class="social-list__item">
+                <a class="social-list__link" target="_blank" href="#">
+                  <svg class="social-list__link-icon"  width="30" height="30" aria-label="Наша страница в одноклассниках." focusable="false">
+                    <use href="img/sprite.svg#icon-ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" target="_blank" href="#">
+                  <svg class="social-list__link-icon"  width="30" height="30" aria-label="Наша страница в вконтакте." focusable="false">
+                    <use href="img/sprite.svg#icon-vk"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" target="_blank" href="#">
+                  <svg class="social-list__link-icon"  width="30" height="30" aria-label="Наша страница в пинтересте." focusable="false">
+                    <use href="img/sprite.svg#icon-pinterest"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div> 
+          <div class="footer__nav-container accordion" data-accordion="parent" data-single="data-single" data-destroy="(max-width: 767px)">
+            <div class="footer__nav accordion__element" data-accordion="element">
+              <h3 class="footer__nav-title accordion__button" data-accordion="button">Разделы сайта</h3>
+              <ul class="footer__nav-list footer__nav-list--points reset-list accordion__content" data-accordion="content">
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">О Компании</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Продукты</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Производство печатных плат</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">Монтаж печатных плат</a>
+                </li>
+                <li class="footer__nav-item footer__nav-item--components">
+                  <a class="footer__nav-link" href="#">Комплектующие</a>
+                </li>
+                <li class="footer__nav-item footer__nav-item--delivery">
+                  <a class="footer__nav-link" href="#">Доставка</a>
+                </li>
+                <li class="footer__nav-item footer__nav-item--contacts">
+                  <a class="footer__nav-link" href="#">Контакты</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__nav footer__nav--contacts accordion__element is-active" data-accordion="element">
+              <h3 class="footer__nav-title accordion__button" data-accordion="button">Наш офис</h3>
+              <ul class="footer__nav-list reset-list accordion__content" data-accordion="content">
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="#">г. Мытищи, Олимпийский проспект, д.10</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="tel:+74955894050">+7 (495) 589-40-50</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="tel:+79253895829">+7 (925) 389-58-29</a>
+                </li>
+                <li class="footer__nav-item">
+                  <a class="footer__nav-link" href="tel:+79253647813">+7 (925) 364-78-13</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

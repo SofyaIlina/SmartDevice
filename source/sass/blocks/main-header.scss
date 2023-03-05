@@ -1,8 +1,5 @@
 .main-header {
   background: $black-pearl-to-down;
-  padding: 30px 50px 35px;
-  width: 100%;
-  min-height: 120px;
   position: sticky;
   top: 0;
   z-index: 999;
@@ -10,16 +7,25 @@
   &__container {
     display: flex;
     align-items: center;
+    padding-top: 30px;
+    padding-bottom: 35px;
+    min-height: 120px;
   }
 
-  @media (max-width: $tablet-only) {
-    padding: 20px 50px 25px;
-    min-height: 100px;
+  @include vp-1023 {
+    &__container {
+      padding-top: 20px;
+      padding-bottom: 25px;
+      min-height: 100px;
+    }
   }
 
-  @media (max-width: $mobile-only) {
-    padding: 10px 15px 20px 26px;
-    min-height: 70px;
+  @include vp-767 {
+    &__container {
+      padding-top: 10px;
+      padding-bottom: 20px;
+      min-height: 70px;
+    }
   }
 }
 
@@ -28,7 +34,7 @@
   flex-shrink: 0;
   transition: $trans-default;
   margin-right: 160px;
-  
+
   &--mobile {
     display: none;
   }
@@ -37,8 +43,11 @@
   &:active {
     opacity: 0.7;
   }
-  
-  @media (max-width: $mobile-only) {
+
+  @include vp-767 {
+    align-self: flex-end;
+    margin-right: 26px;
+
     &--mobile {
       display: flex;
     }
@@ -47,10 +56,6 @@
       display: none;
     }
   }
-
-  @media (max-width: $mobile-only) {
-    align-self: flex-end;
-  }
 }
 
 .main-header__list {
@@ -58,9 +63,13 @@
   flex-wrap: wrap;
   padding-right: 20px;
 
-  @media (max-width: $tablet-only) {
+  @include vp-1023 {
     align-self: flex-start;
     margin-left: auto;
+  }
+
+  @include vp-767 {
+    padding-right: 10px;
   }
 }
 
@@ -71,7 +80,7 @@
     margin-right: 120px;
   }
 
-  @media (max-width: $tablet-only) {
+  @include vp-1023 {
     margin: 0;
 
     &:not(:last-child) {
@@ -91,14 +100,14 @@
     opacity: 0.7;
   }
 
-  @media (max-width: $tablet-only) {
+  @include vp-1023 {
     display: block;
     padding: 20px;
   }
 }
 
 .main-header__link-text {
-  @media (max-width: $tablet-only) {
+  @include vp-1023 {
     display: none;
   }
 }
@@ -108,7 +117,7 @@
   top: auto;
   left: 0;
 
-  @media (max-width: $tablet-only) {
+  @include vp-1023 {
     top: 10px;
     left: 10px;
   }
@@ -121,6 +130,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+
+  @include vp-1023 {
+    display: none;
+  }
 }
 
 .main-header__btn {
@@ -130,8 +143,4 @@
   font-size: 14px;
   border: 1px solid $color-alice-blue;
   line-height: 18px;
-  
-  @media (max-width: $tablet-only) {
-    display: none;
-  }
 }
