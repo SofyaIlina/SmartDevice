@@ -1,0 +1,42 @@
+.about {
+  background: $color-alice-blue-lighter;
+}
+
+.about__container {
+  padding-left: 300px;
+  padding-bottom: 120px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 320px;
+    top: -5px;
+    left: 50px;
+    background-image: url('../img/2022.png');
+  }
+}
+
+.about__title {
+  font-family: $ff-Roboto-Condensed;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.about__description {
+  margin: 0;
+  margin-bottom: 18px;
+}
+
+.about__button {
+  color: $color-deep-sky-blue;
+  border: 1px solid $color-deep-sky-blue;
+  background-color: transparent;
+  padding: 13px;
+  min-width: 180px;
+  justify-content: center;
+}
