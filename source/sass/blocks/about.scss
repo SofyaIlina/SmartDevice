@@ -3,6 +3,7 @@
 }
 
 .about__container {
+  padding-top: 60px;
   padding-left: 300px;
   padding-bottom: 120px;
   position: relative;
@@ -12,9 +13,35 @@
     position: absolute;
     width: 150px;
     height: 320px;
-    top: -5px;
+    top: 55px;
     left: 50px;
     background-image: url('../img/2022.png');
+  }
+
+  @include retina {
+    &::before {
+      background: url('../img/2022@2x.png') contain;
+    }
+  }
+
+  @include vp-1023 {
+    padding-top: 40px;
+    padding-left: 225px;
+    padding-bottom: 80px;
+
+    &::before {
+      top: 43px;
+      left: 45px;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 21px;
+    padding-bottom: 80px;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -24,19 +51,62 @@
   line-height: 51px;
   font-weight: 400;
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 13px;
+
+  @include vp-1023 {
+    margin-bottom: 10px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 12px;
+  }
 }
 
 .about__description {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+
+  @include vp-1023 {
+    margin-bottom: 18px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 16px;
+
+    & span {
+      display: none;
+    }
+  }
 }
 
-.about__button {
+.about__btn {
   color: $color-deep-sky-blue;
   border: 1px solid $color-deep-sky-blue;
   background-color: transparent;
-  padding: 13px;
+  padding: 8px;
+  margin-top: 19px;
   min-width: 180px;
   justify-content: center;
+
+  @include vp-1023 {
+    margin-top: 0;
+  }
+
+  @include vp-767 {
+    min-width: 160px;
+  }
+
+  &:hover {
+    transition: $trans-default;
+    opacity: 0.5;
+  }
+}
+
+.about__accordion-wrapper {
+  margin: 0;
+  padding-bottom: 20px;
 }
