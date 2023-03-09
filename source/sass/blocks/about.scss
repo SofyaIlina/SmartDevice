@@ -15,12 +15,12 @@
     height: 320px;
     top: 60px;
     left: 50px;
-    background-image: url('../img/2022.png');
+    background: url('../img/2022.png') center/contain;
   }
 
   @include retina {
     &::before {
-      background: url('../img/2022@2x.png') contain;
+      background-image: url('../img/2022@2x.png');
     }
   }
 
@@ -98,6 +98,7 @@
 
   @include vp-767 {
     min-width: 160px;
+    padding: 9px;
   }
 
   &:hover {

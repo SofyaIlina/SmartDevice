@@ -10,6 +10,11 @@
   @include vp-1023 {
     padding-top: 55px;
   }
+
+  @include vp-767 {
+    padding-top: 47px;
+    padding-bottom: 86px;
+  }
 }
 
 .products__title {
@@ -20,8 +25,26 @@
   margin: 0;
   margin-bottom: 55px;
 
+  &--mobile {
+    display: none;
+  }
+
   @include vp-1023 {
     margin-bottom: 37px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 28px;
+
+    &--mobile {
+      display: block;
+    }
+
+    &--desktop {
+      display: none;
+    }
   }
 }
 
@@ -38,6 +61,10 @@
 
 .products__item {
   background: $color-black-pearl url('../img/bg-card-product.jpg') no-repeat;
+
+  @include retina {
+    background-image: url('../img/bg-card-product@2x.jpg');
+  }
 }
 
 .products__link {
@@ -89,20 +116,57 @@
       display: inline-block;
     }
   }
+
+  @include vp-767 {
+    font-size: 18px;
+    padding: 30px;
+    padding-top: 26px;
+    padding-bottom: 60px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+
+    &::after {
+      right: 15px;
+      bottom: 16px;
+    }
+  }
 }
 
 .products__item:nth-child(1) {
   background-position: -189px -118px;
 
   @include vp-1023 {
-    background-position: -245px -548px;
+    background-position: -244px -549px;
+  }
+
+  @include vp-767 {
+    background-position: -375px -299px;
   }
 }
 
 .products__item:nth-child(2) {
   background-position: -532px -122px;
+
+  @include vp-1023 {
+    background-position: -628px -314px;
+  }
+
+  @include vp-767 {
+    background-position: -365px -537px;
+  }
 }
 
 .products__item:nth-child(3) {
   background-position: -893px -112px;
+
+  @include vp-1023 {
+    background-position: -148px -359px;
+  }
+
+  @include vp-767 {
+    background-position: -884px -394px;
+  }
 }
