@@ -1,11 +1,11 @@
 .promo {
-  background: $color-black-pearl url('../img/bg-main-block.jpg');
+  background: $color-black-pearl url("../img/bg-main-block.jpg");
   background-size: cover;
   color: $color-alice-blue;
   margin-top: -120px;
 
   @include retina {
-    background-image: url('../img/bg-main-block@2x.jpg');
+    background-image: url("../img/bg-main-block@2x.jpg");
   }
 
   @include vp-1023 {
@@ -29,7 +29,7 @@
   }
 }
 
-.promo__title {
+.promo h2 {
   font-family: $ff-Roboto-Condensed;
   font-size: 80px;
   line-height: 94px;
@@ -51,7 +51,7 @@
   }
 }
 
-.promo__description {
+.promo p {
   font-size: 22px;
   line-height: 35px;
   max-width: 685px;

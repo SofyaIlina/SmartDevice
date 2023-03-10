@@ -106,13 +106,13 @@
   }
 }
 
-.main-header__link-text {
+.main-header__link span {
   @include vp-1023 {
     display: none;
   }
 }
 
-.main-header__link-icon {
+.main-header__link svg {
   position: absolute;
   top: auto;
   left: 0;

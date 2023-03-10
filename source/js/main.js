@@ -13,7 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   headerScroll();
-  aboutAccordion;
 
   // Modules
   // ---------------------------------

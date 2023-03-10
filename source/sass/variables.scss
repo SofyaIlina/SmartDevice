@@ -11,6 +11,9 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
 $color-black-pearl:                 #041827;
+$color-black-pearl-darker:          #041427;
+$color-cerulean:                    #026593;
+$color-pacific-blue:                #019bdf;
 $color-alice-blue:                  #f2f5f6;
 $color-alice-blue-lighter:          #f8fdff;
 $color-alice-blue-opacity7:         rgba(248, 253, 255, 0.7);
@@ -21,6 +24,7 @@ $color-whisper:                     #ebebeb;
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
 $black-pearl-to-down:               linear-gradient(180deg, $color-black-pearl 84.9%, rgba(4, 24, 39, 0) 100%);
+$bg-feedback:                       linear-gradient(139deg, $color-cerulean 33.5%, $color-deep-sky-blue 0%);
 
 // Typography
 // ---------------------------------

@@ -26,7 +26,7 @@
   @include vp-1023 {
     flex-direction: row;
     margin-right: 0;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
   }
 
   @include vp-767 {
@@ -72,7 +72,7 @@
 
 .footer__nav-container {
   display: flex;
-  padding: 5px 30px 0 35px;
+  padding: 4px 30px 0 35px;
   justify-content: space-between;
 
   @include vp-1023 {
@@ -100,7 +100,6 @@
       max-width: 320px;
       margin-right: 5px;
     }
-  
   }
 
   @include vp-767 {
@@ -170,7 +169,7 @@
   }
 }
 
-.footer__nav-link {
+.footer__nav-item a {
   color: $color-default-white;
   opacity: 0.7;
   transition: $trans-default;

@@ -56,14 +56,14 @@
 }
 
 .features__item:hover,
-.features__item:hover .features__name,
-.features__item:hover .features__icon {
+.features__item:hover h3,
+.features__item:hover svg {
   color: $color-alice-blue;
   background-color: $color-deep-sky-blue;
   border-color: $color-deep-sky-blue;
 }
 
-.features__icon {
+.features__list svg {
   margin-bottom: 20px;
   color: $color-deep-sky-blue;
 
@@ -77,7 +77,7 @@
   }
 }
 
-.features__name {
+.features__item h3 {
   font-family: $ff-Roboto-Condensed;
   font-size: 24px;
   font-weight: 400;
@@ -97,7 +97,7 @@
   }
 }
 
-.features__description {
+.features__item p {
   margin: 0;
 
   @include vp-767 {

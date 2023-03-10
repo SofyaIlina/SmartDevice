@@ -18,6 +18,7 @@ html {
   line-height: 22px;
   font-family: $ff-PT-Mono;
   color: $color-alice-blue;
+  scroll-behavior: smooth;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

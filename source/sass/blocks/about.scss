@@ -15,12 +15,12 @@
     height: 320px;
     top: 60px;
     left: 50px;
-    background: url('../img/2022.png') center/contain;
+    background: url("../img/2022.png") center/contain;
   }
 
   @include retina {
     &::before {
-      background-image: url('../img/2022@2x.png');
+      background-image: url("../img/2022@2x.png");
     }
   }
 
@@ -45,7 +45,7 @@
   }
 }
 
-.about__title {
+.about h2 {
   font-family: $ff-Roboto-Condensed;
   font-size: 36px;
   line-height: 51px;
@@ -64,7 +64,7 @@
   }
 }
 
-.about__description {
+.about p {
   margin: 0;
   margin-bottom: 20px;
 
@@ -107,7 +107,7 @@
   }
 }
 
-.about__accordion-wrapper {
+.about__accordion-wrapper p {
   margin: 0;
   padding-bottom: 20px;
 }
