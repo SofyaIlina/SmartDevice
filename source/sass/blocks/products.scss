@@ -69,9 +69,17 @@
 .products__item {
   background: $color-black-pearl url("../img/bg-card-product.jpg") no-repeat;
 
+  @supports (background-image: url("../img/bg-card-product.webp")) {
+    background-image: url("../img/bg-card-product.webp");
+  }
+
   @include retina {
     background-image: url("../img/bg-card-product@2x.jpg");
     background-size: 1493px 817px;
+
+    @supports (background-image: url("../img/bg-card-product@2x.webp")) {
+      background-image: url("../img/bg-card-product@2x.webp");
+    }
   }
 }
 

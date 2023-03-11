@@ -32,11 +32,19 @@
     top: 80px;
     left: -625px;
     background: url("../img/feedback-paper-airplane.png") center/contain no-repeat;
+
+    @supports (background-image: url("../img/feedback-paper-airplane.webp")) {
+      background-image: url("../img/feedback-paper-airplane.webp");
+    }
   }
 
   @include retina {
     &::before {
       background-image: url("../img/feedback-paper-airplane@2x.png");
+
+      @supports (background-image: url("../img/feedback-paper-airplane@2x.webp")) {
+        background-image: url("../img/feedback-paper-airplane@2x.webp");
+      }
     }
   }
 

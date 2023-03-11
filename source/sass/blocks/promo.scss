@@ -4,8 +4,16 @@
   color: $color-alice-blue;
   margin-top: -120px;
 
+  @supports (background-image: url("../img/bg-main-block.webp")) {
+    background-image: url("../img/bg-main-block.webp");
+  }
+
   @include retina {
     background-image: url("../img/bg-main-block@2x.jpg");
+
+    @supports (background-image: url("../img/bg-main-block@2x.webp")) {
+      background-image: url("../img/bg-main-block@2x.webp");
+    }
   }
 
   @include vp-1023 {

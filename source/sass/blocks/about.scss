@@ -16,11 +16,19 @@
     top: 60px;
     left: 50px;
     background: url("../img/2022.png") center/contain;
+
+    @supports (background-image: url("../img/2022.webp")) {
+      background-image: url("../img/2022.webp");
+    }
   }
 
   @include retina {
     &::before {
       background-image: url("../img/2022@2x.png");
+
+      @supports (background-image: url("../img/2022@2x.webp")) {
+        background-image: url("../img/2022@2x.webp");
+      }
     }
   }
 

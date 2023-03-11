@@ -27,6 +27,10 @@
       min-height: 70px;
     }
   }
+
+  @include vp-1023 {
+    position: static;
+  }
 }
 
 .main-header__logo-link {
