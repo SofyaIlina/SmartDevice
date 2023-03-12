@@ -74,6 +74,7 @@
     line-height: 16px;
     padding-left: 36px;
     align-self: end;
+    order: 1;
 
     & label {
       position: relative;
@@ -131,6 +132,10 @@
 
 input:checked + .feedback-form__agreement-mark {
   background: url("../img/sprite/icon-checkbox.svg");
+}
+
+input:not(:checked) ~ span {
+  color: rgb(223, 54, 54);
 }
 
 input:hover + .feedback-form__agreement-mark {
