@@ -74,6 +74,7 @@
     line-height: 16px;
     padding-left: 36px;
     align-self: end;
+    order: 1;
 
     & label {
       position: relative;
@@ -112,7 +113,7 @@
   color: $color-default-white;
 }
 
-.feedback-form input,
+.feedback-form input:not([type="checkbox"]),
 .feedback-form textarea {
   width: 100%;
   padding: 15px;
@@ -129,20 +130,8 @@
   }
 }
 
-input:checked + .feedback-form__agreement-mark {
-  background: url("../img/sprite/icon-checkbox.svg");
-}
-
-input:hover + .feedback-form__agreement-mark {
-  background-color: $color-cerulean;
-}
-
-input:focus + .feedback-form__agreement-mark {
-  outline: 1px solid $color-default-white;
-}
-
-
-.feedback-form__agreement-mark {
+input[type="checkbox"] {
+  appearance: none;
   position: absolute;
   width: 15px;
   height: 15px;
@@ -151,6 +140,23 @@ input:focus + .feedback-form__agreement-mark {
   transform: translateY(-50%);
   border: 1px solid $color-default-white;
   border-radius: 2px;
+
+  &:hover {
+    background-color: $color-cerulean;
+  }
+
+  &:focus {
+    outline: 1px solid $color-default-white;
+    outline-offset: 0;
+  }
+}
+
+input:checked {
+  background: url("../img/sprite/icon-checkbox.svg");
+}
+
+input:not(:checked) ~ span {
+  color: rgb(223, 54, 54);
 }
 
 .feedback-form textarea {

@@ -85,9 +85,23 @@
     line-height: 19px;
     margin-bottom: 16px;
 
-    & span {
-      display: none;
-    }
+    // & span {
+    //   display: none;
+    // }
+  }
+}
+
+[data-accordion="element-mobile"] {
+  padding-bottom: 20px;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+[data-accordion="element"].is-active {
+  [data-accordion="element-mobile"] {
+    display: inline;
   }
 }
 

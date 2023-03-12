@@ -1606,6 +1606,14 @@ button,
   margin-bottom: 20px;
 }
 
+[data-accordion=element-mobile] {
+  padding-bottom: 20px;
+}
+
+[data-accordion=element].is-active [data-accordion=element-mobile] {
+  display: inline;
+}
+
 .about__btn {
   color: #00b2ff;
   border: 1px solid #00b2ff;
@@ -1814,6 +1822,9 @@ button,
   -ms-flex-item-align: end;
   -ms-grid-row-align: end;
   align-self: end;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .feedback-form__item--agreement label {
@@ -1840,7 +1851,7 @@ button,
   color: #ffffff;
 }
 
-.feedback-form input,
+.feedback-form input:not([type=checkbox]),
 .feedback-form textarea {
   width: 100%;
   padding: 15px;
@@ -1849,29 +1860,20 @@ button,
   border-radius: 3px;
 }
 
-.feedback-form input:hover,
+.feedback-form input:not([type=checkbox]):hover,
 .feedback-form textarea:hover {
   background-color: #026593;
 }
 
-.feedback-form input:focus,
+.feedback-form input:not([type=checkbox]):focus,
 .feedback-form textarea:focus {
   outline: 1px solid #ffffff;
 }
 
-input:checked + .feedback-form__agreement-mark {
-  background: url("../img/sprite/icon-checkbox.svg");
-}
-
-input:hover + .feedback-form__agreement-mark {
-  background-color: #026593;
-}
-
-input:focus + .feedback-form__agreement-mark {
-  outline: 1px solid #ffffff;
-}
-
-.feedback-form__agreement-mark {
+input[type=checkbox] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   position: absolute;
   width: 15px;
   height: 15px;
@@ -1882,6 +1884,23 @@ input:focus + .feedback-form__agreement-mark {
   transform: translateY(-50%);
   border: 1px solid #ffffff;
   border-radius: 2px;
+}
+
+input[type=checkbox]:hover {
+  background-color: #026593;
+}
+
+input[type=checkbox]:focus {
+  outline: 1px solid #ffffff;
+  outline-offset: 0;
+}
+
+input:checked {
+  background: url("../img/sprite/icon-checkbox.svg");
+}
+
+input:not(:checked) ~ span {
+  color: rgb(223, 54, 54);
 }
 
 .feedback-form textarea {
@@ -1905,11 +1924,10 @@ input:focus + .feedback-form__agreement-mark {
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(3, 16, 27, 0.7);
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-  visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
   transition: opacity 0.6s cubic-bezier(0.55, 0, 0.1, 1), visibility 0.6s cubic-bezier(0.55, 0, 0.1, 1), -webkit-transform 0.6s cubic-bezier(0.55, 0, 0.1, 1);
@@ -2514,7 +2532,7 @@ input:focus + .feedback-form__agreement-mark {
     margin-bottom: 16px;
   }
 
-  .about p span {
+  [data-accordion=element-mobile] {
     display: none;
   }
 

@@ -92,25 +92,21 @@
             </ul>
           </div>
         </section>
-        <section class="about">
-          <div class="about__container container">
+        <section class="about" data-accordion="parent">
+          <div class="about__container container" data-accordion="element">
             <h2>О компании</h2>
             <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с&nbsp;1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней.</p>
             <p>
               Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-              <span>Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
+              <span data-accordion="element-mobile">Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.</span>
             </p>
-            <div class="accordion" data-accordion="parent">
-              <div data-accordion="element">
-                <div class="about__accordion-wrapper" data-accordion="content">
-                  <p>
-                    Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
-                  Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.
-                  </p>
-                </div>
-                <button class="about__btn btn" data-accordion="button">Подробнее</button>
-              </div>
+            <div class="about__accordion-wrapper" data-accordion="content">
+              <p>
+                Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более 1&nbsp;000&nbsp;000&nbsp;клиентов, 70% из&nbsp;которых продолжают сотрудничество по&nbsp;сей день. На&nbsp;данный момент насчитывается более 14&nbsp;офисов по&nbsp;всей стране и&nbsp;20&nbsp;городов присутствия.
+              Мы&nbsp;стремимся к&nbsp;постоянному развитию и&nbsp;повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и&nbsp;время наших клиентов.
+              </p>
             </div>
+            <button class="about__btn btn" data-accordion="button">Подробнее</button>
           </div>
         </section>
         <section class="products">
@@ -135,9 +131,9 @@
           </div>
         </section>
         <section class="feedback" id="feedback">
-          <div class="feedback__container container">
+          <div class="feedback__container container" data-form-validate>
             <h2 class="visually-hidden">Форма обратной связи.</h2>
-            <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru/" method="get">
+            <form class="feedback__form feedback-form" action="https://echo.htmlacademy.ru/" method="post">
               <h3>Остались вопросы? Задайте их&nbsp;нам!</h3>
               <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
               <div class="feedback-form__group">
@@ -158,14 +154,13 @@
                     <textarea name="question" placeholder="Ваш вопрос" rows="6"></textarea>
                   </label>
                 </div>
-                <button class="feedback-form__item feedback-form__item--btn btn" type="submit">Задать вопрос</button>
                 <div class="feedback-form__item feedback-form__item--agreement">
                   <label>
-                    <input class="visually-hidden" type="checkbox" name="agreement" checked required>
-                    <span class="feedback-form__agreement-mark"></span>
+                    <input  type="checkbox" name="agreement" checked required>
                     <span>Я&nbsp;согласен нa&nbsp;обработку <br>персональных данных</span>
                   </label>
                 </div>
+                <button class="feedback-form__item feedback-form__item--btn btn" type="submit">Задать вопрос</button>
               </div>
             </form>
           </div>
@@ -256,21 +251,21 @@
     <div class="modal modal--preload" data-modal="feedback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
-        <div class="modal__content">
+        <div class="modal__content" data-form-validate>
           <h2 class="visually-hidden">Форма обратной связи.</h2>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal tabindex="1">
             <svg width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
           </button>
-          <form class="modal__form feedback-form" action="https://echo.htmlacademy.ru/" method="get">
+          <form class="modal__form feedback-form" action="https://echo.htmlacademy.ru/" method="post">
             <h3>Закажите звонок</h3>
             <p>Оставьте контакты, мы&nbsp;проконсультируем вас&nbsp;бесплатно в&nbsp;удобное время</p>
             <div class="modal__form-group feedback-form__group">
               <div class="modal__form-item feedback-form__item">
                 <label data-validate-type="text" data-required
                 data-message-base="Поле обязательно к заполнению">
-                  <input type="text" name="user-name" placeholder="Имя" required autofocus>
+                  <input type="text" name="user-name" placeholder="Имя" required data-focus>
                 </label>
               </div>
               <div class="modal__form-item feedback-form__item">
@@ -284,11 +279,10 @@
                   <textarea name="question" placeholder="Ваш вопрос" rows="6"></textarea>
                 </label>
               </div>
-              <button class="modal__form-item modal__form-item--btn feedback-form__item feedback-form__item--btn btn" type="submit">Отправить</button>
+              <button class="modal__form-item modal__form-item--btn feedback-form__item feedback-form__item--btn btn" type="submit" tabindex="2">Отправить</button>
               <div class="modal__form-item modal__form-item--agreement feedback-form__item feedback-form__item--agreement">
                 <label>
-                  <input class="visually-hidden" type="checkbox" name="agreement" checked required>
-                  <span class="modal__form-agreement-mark feedback-form__agreement-mark"></span>
+                  <input type="checkbox" name="agreement" checked required tabindex="0">
                   <span>Я&nbsp;согласен нa&nbsp;обработку персональных данных</span>
                 </label>
               </div>
