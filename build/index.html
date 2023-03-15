@@ -119,7 +119,7 @@
             </div>
             <ul class="products__list reset-list">
               <li class="products__item">
-                <a href="#">Производство<br> печатных плат</a>
+                <a href="#">Производство<br> печатных&nbsp;плат</a>
               </li>
               <li class="products__item">
                 <a href="#">Монтаж<br> печатных плат</a>
@@ -155,8 +155,8 @@
                   </label>
                 </div>
                 <div class="feedback-form__item feedback-form__item--agreement">
-                  <label>
-                    <input  type="checkbox" name="agreement" checked required>
+                  <label data-validate-type="checkbox" data-required>
+                    <input type="checkbox" name="agreement" checked required>
                     <span>Я&nbsp;согласен нa&nbsp;обработку <br>персональных данных</span>
                   </label>
                 </div>
@@ -253,7 +253,7 @@
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content" data-form-validate>
           <h2 class="visually-hidden">Форма обратной связи.</h2>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal tabindex="1">
+          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
             <svg width="20" height="20">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
@@ -279,13 +279,13 @@
                   <textarea name="question" placeholder="Ваш вопрос" rows="6"></textarea>
                 </label>
               </div>
-              <button class="modal__form-item modal__form-item--btn feedback-form__item feedback-form__item--btn btn" type="submit" tabindex="2">Отправить</button>
               <div class="modal__form-item modal__form-item--agreement feedback-form__item feedback-form__item--agreement">
                 <label>
-                  <input type="checkbox" name="agreement" checked required tabindex="0">
+                  <input type="checkbox" name="agreement" checked required>
                   <span>Я&nbsp;согласен нa&nbsp;обработку персональных данных</span>
                 </label>
               </div>
+              <button class="modal__form-item modal__form-item--btn feedback-form__item feedback-form__item--btn btn" type="submit">Отправить</button>
             </div>
           </form>
         </div>

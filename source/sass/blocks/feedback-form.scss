@@ -132,6 +132,7 @@
 
 input[type="checkbox"] {
   appearance: none;
+  cursor: pointer;
   position: absolute;
   width: 15px;
   height: 15px;
@@ -153,6 +154,10 @@ input[type="checkbox"] {
 
 input:checked {
   background: url("../img/sprite/icon-checkbox.svg");
+}
+
+input[type="checkbox"] + span {
+  cursor: pointer;
 }
 
 input:not(:checked) ~ span {

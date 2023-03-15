@@ -1,7 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
-import {headerScroll} from './modules/header-scroll';
 import {aboutAccordion} from './modules/about-accordion';
 
 // ---------------------------------
@@ -12,7 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-  headerScroll();
 
   // Modules
   // ---------------------------------

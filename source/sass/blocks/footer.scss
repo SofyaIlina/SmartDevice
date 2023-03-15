@@ -20,6 +20,7 @@
 
 .footer__social {
   display: flex;
+  max-width: 215px;
   flex-direction: column;
   margin-right: 125px;
 
@@ -27,6 +28,7 @@
     flex-direction: row;
     margin-right: 0;
     margin-bottom: 33px;
+    max-width: 100%;
   }
 
   @include vp-767 {
