@@ -7,6 +7,7 @@
   &__container {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 35px;
     min-height: 120px;
@@ -37,7 +38,7 @@
   display: flex;
   flex-shrink: 0;
   transition: $trans-default;
-  margin-right: 160px;
+  margin-right: 5px;
 
   &--mobile {
     display: none;
@@ -64,11 +65,14 @@
 
 .main-header__list {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 44px;
-  padding-right: 20px;
+  min-width: 480px;
+  grid-template-columns: 225px 225px;
+  gap: 6%;
+  margin-left: 20px;
 
   @include vp-1023 {
+    grid-template-columns: 1fr 1fr;
+    min-width: auto;
     align-self: flex-start;
     margin-left: auto;
     padding: 0;
@@ -130,12 +134,13 @@
 }
 
 .main-header__btn-wrapper {
-  max-width: 270px;
-  margin-left: auto;
+  max-width: 250px;
   flex-shrink: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+  margin-right: 0;
+  margin-left: 15px;
 
   @include vp-1023 {
     display: none;
@@ -143,7 +148,7 @@
 }
 
 .main-header__btn {
-  padding-left: 17px;
+  padding-left: 15px;
   padding-right: 17px;
   margin-top: 5px;
   margin-bottom: 12px;

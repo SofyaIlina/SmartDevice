@@ -60,10 +60,6 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 7%;
 
-  @include vp-1279 {
-    gap: 4%;
-  }
-
   @include vp-1023 {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -85,14 +81,6 @@
       background-image: url("../img/bg-card-product@2x.webp");
     }
   }
-
-  @include vp-1023 {
-    max-width: 864px;
-  }
-
-  @include vp-767 {
-    max-width: 608px;
-  }
 }
 
 .products__item a {
@@ -101,14 +89,10 @@
   line-height: 30px;
   width: 100%;
   color: $color-default-white;
-  padding: 46px 117px 100px 40px;
+  padding: 46px 40px 100px;
   display: flex;
   min-height: 650px;
   position: relative;
-
-  & br {
-    display: none;
-  }
 
   &::before {
     content: "";
@@ -139,10 +123,6 @@
     min-height: 250px;
     padding-top: 38px;
     padding-left: 45px;
-
-    & br {
-      display: inline-block;
-    }
   }
 
   @include vp-767 {
@@ -178,8 +158,20 @@
 .products__item:nth-child(2) {
   background-position: -532px -122px;
 
+  & br:nth-child(1) {
+    display: none;
+  }
+
   @include vp-1023 {
-    background-position: -628px -314px;
+    background-position: 76% -314px;
+
+    & br:nth-child(1) {
+      display: inline-block;
+    }
+
+    & br:nth-child(2) {
+      display: none;
+    }
   }
 
   @include vp-767 {
@@ -195,6 +187,6 @@
   }
 
   @include vp-767 {
-    background-position: -884px -394px;
+    background-position: 72% -394px;
   }
 }

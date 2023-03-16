@@ -1,6 +1,7 @@
 .social-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 170px;
 
   @include vp-767 {
     display: grid;
